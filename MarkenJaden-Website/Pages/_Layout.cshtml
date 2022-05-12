@@ -1,0 +1,51 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@namespace MarkenJaden_Website.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <base href="~/" />
+    
+    <link rel="icon" type="image/png" sizes="500x500" href="assets/img/Profilbild.png?h=3b6e13eb28a589b2da0b10df893f0e84">
+    <link rel="icon" type="image/png" sizes="500x500" href="assets/img/Profilbild.png?h=3b6e13eb28a589b2da0b10df893f0e84">
+    <link rel="icon" type="image/png" sizes="500x500" href="assets/img/Profilbild.png?h=3b6e13eb28a589b2da0b10df893f0e84">
+    <link rel="icon" type="image/png" sizes="500x500" href="assets/img/Profilbild.png?h=3b6e13eb28a589b2da0b10df893f0e84">
+    <link rel="icon" type="image/png" sizes="500x500" href="assets/img/Profilbild.png?h=3b6e13eb28a589b2da0b10df893f0e84">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=9186eefde5d28c1eb026fc459ee2855e">
+    <link rel="stylesheet" href="assets/css/styles.css?h=d41d8cd98f00b204e9800998ecf8427e">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Themes:
+    Auto:   css/skeleton-auto.css
+    Light:  css/skeleton-light.css
+    Dark:   css/skeleton-dark.css
+    -->
+    <link rel="stylesheet" href="css/skeleton-auto.css">
+    <link rel="stylesheet" href="css/brands.css">    
+
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="MarkenJaden-Website.styles.css" rel="stylesheet" />
+    <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+</head>
+<body>
+    @RenderBody()
+
+    <div id="blazor-error-ui">
+        <environment include="Staging,Production">
+            An error has occurred. This application may no longer respond until reloaded.
+        </environment>
+        <environment include="Development">
+            An unhandled exception has occurred. See browser dev tools for details.
+        </environment>
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script src="_framework/blazor.server.js"></script>
+</body>
+</html>
