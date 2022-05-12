@@ -26,4 +26,5 @@ app.UseRouting();
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
-app.Run();
+if (app.Environment.IsDevelopment()) app.Run();
+else app.Run("http://localhost:5104/");
