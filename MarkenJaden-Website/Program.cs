@@ -1,3 +1,4 @@
+using MarkenJaden_Website.Integrations.Discord;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 
@@ -25,6 +26,10 @@ app.UseRouting();
 
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
+
+#pragma warning disable CS4014
+new DiscordMain().MainAsync();
+#pragma warning restore CS4014
 
 if (app.Environment.IsDevelopment()) app.Run();
 else app.Run("http://localhost:5104/");

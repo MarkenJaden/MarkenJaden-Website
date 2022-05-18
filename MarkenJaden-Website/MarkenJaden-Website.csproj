@@ -15,4 +15,8 @@
     <None Include="wwwroot\css\open-iconic\README.md" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Discord.Net" Version="3.6.1" />
+  </ItemGroup>
+
 </Project>
