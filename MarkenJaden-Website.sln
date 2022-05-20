@@ -8,7 +8,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{49BADD73-8518-4138-896F-7CA70C6CACD8}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
-		..\..\..\Documents\Sensitive-data = ..\..\..\Documents\Sensitive-data
 	EndProjectSection
 EndProject
 Global

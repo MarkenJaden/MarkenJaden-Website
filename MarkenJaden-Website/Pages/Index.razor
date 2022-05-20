@@ -1,4 +1,5 @@
 ﻿@page "/"
+@using MarkenJaden_Website.Integrations.Discord
 
 <PageTitle>Links</PageTitle>
 
@@ -9,7 +10,7 @@
         <div class="column" style="margin-top: 10%">
 
             <!-- Your Image Here -->
-            <img src="images/avatar.png" srcset="images/avatar@2x.png 2x" alt="LittleLink Logo">
+            <img src="@DiscordMain.profilePictureUrl" alt="MarkenJaden profile picture">
 
             <!-- Title -->
             <h1>MarkenJaden</h1>
@@ -205,5 +206,5 @@
 @code
 {
     private string TikTok = "<a class=\"button button-tiktok\" href=\"https://www.tiktok.com/@jadenschmidt4\" target=\"_blank\" rel=\"noopener\"><img class=\"icon\" src=\"images/icons/tiktok.svg\" alt=\"TikTok Logo\">TikTok</a>";
-    private string WakaTime = "<a class=\"button button-twit\" href=\"https://wakatime.com/@MarkenJaden\" target=\"_blank\" rel=\"noopener\"><img class=\"icon\" src=\"https://wakatime.com/static/img/wakatime.svg\" alt=\"WakaTime Logo\">WakaTime</a>";
+    private string WakaTime = "<a class=\"button button-reddit\" href=\"https://wakatime.com/@MarkenJaden\" target=\"_blank\" rel=\"noopener\"><img class=\"icon\" src=\"https://wakatime.com/static/img/wakatime.svg\" alt=\"WakaTime Logo\">WakaTime</a>";
 }

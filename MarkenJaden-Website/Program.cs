@@ -28,7 +28,7 @@ app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
 #pragma warning disable CS4014
-new DiscordMain().MainAsync();
+new DiscordMain().MainAsync()/*.GetAwaiter().GetResult()*/;
 #pragma warning restore CS4014
 
 if (app.Environment.IsDevelopment()) app.Run();
