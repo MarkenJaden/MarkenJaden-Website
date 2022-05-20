@@ -96,12 +96,11 @@
       <!-- Pinterest -->
         <a class="button button-pinterest" href="https://www.pinterest.de/MarkenJaden1/" target="_blank" rel="noopener">
             <img class="icon" src="images/icons/pinterest.svg" alt="Pinterest Logo">Follow on Pinterest</a>
-        <br>
+      <br>
 
-        <!-- TikTok -->
-        <a class="button button-tiktok" href="https://www.tiktok.com/@jadenschmidt4" target="_blank" rel="noopener">
-            <img class="icon" src="images/icons/tiktok.svg" alt="TikTok Logo">TikTok</a>
-        <br>
+      <!-- TikTok -->
+        @((MarkupString)TikTok)
+      <br>
 
       <!-- SoundCloud -->
         <a class="button button-soundcloud" href="https://soundcloud.com/jaden-schmidt-450737544" target="_blank" rel="noopener">
@@ -148,11 +147,11 @@
             <img class="icon" src="images/icons/xing.svg" alt="xing Logo">Xing</a>
         <br>
 
-      <!-- VRChat -->
-        <a class="button button-vrchat" href="#" target="_blank" rel="noopener">
-            <img class="icon" src="images/icons/vrchat.svg" alt="VRChat Logo">VRChat</a>
-        <br>
-
       </div>
     </div>
   </div>
+  
+@code
+{
+    private string TikTok = "<a class=\"button button-tiktok\" href=\"https://www.tiktok.com/@jadenschmidt4\" target=\"_blank\" rel=\"noopener\"><img class=\"icon\" src=\"images/icons/tiktok.svg\" alt=\"TikTok Logo\">TikTok</a>";
+}
