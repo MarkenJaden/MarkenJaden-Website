@@ -6,6 +6,7 @@ namespace MarkenJaden_Website.Integrations.Discord
     public class DiscordMain
     {
         private DiscordSocketClient _client;
+        
         public async Task MainAsync()
         {
             _client = new();
