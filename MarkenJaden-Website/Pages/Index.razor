@@ -1,5 +1,6 @@
 ﻿@page "/"
 @using MarkenJaden_Website.Integrations.Discord
+@using MarkenJaden_Website.Integrations.Discord.Services
 
 <PageTitle>Links</PageTitle>
 
@@ -10,7 +11,7 @@
         <div class="column" style="margin-top: 10%">
 
             <!-- Your Image Here -->
-            <img src="@DiscordMain.profilePictureUrl" alt="MarkenJaden profile picture">
+            <img src="@ControlService.GetProfilePicture()" alt="MarkenJaden profile picture">
 
             <!-- Title -->
             <h1>MarkenJaden</h1>

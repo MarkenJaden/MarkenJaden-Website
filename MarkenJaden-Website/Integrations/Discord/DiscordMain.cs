@@ -1,30 +1,34 @@
 ﻿using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
+using MarkenJaden_Website.Integrations.Discord.Services;
 
 namespace MarkenJaden_Website.Integrations.Discord
 {
     public class DiscordMain
     {
         private DiscordSocketClient _client;
-        public static string profilePictureUrl;
 
-        public async Task MainAsync()
+        public async Task MainAsync(WebApplication app)
         {
-            _client = new();
-
-            _client.Log += Log;
-
             var token = await File.ReadAllLinesAsync("Sensitive-data");
 
             await using var services = ConfigureServices();
 
+            _client = services.GetRequiredService<DiscordSocketClient>();
+            _client.Log += Log;
+
             await _client.LoginAsync(TokenType.Bot, token[0]);
             await _client.StartAsync();
-            
-            await _client.GetGuild(961373284555956254).DownloadUsersAsync();
-            profilePictureUrl = _client.GetGuild(961373284555956254).GetUser(222733101770604545).GetDisplayAvatarUrl();
 
+            services.GetRequiredService<ControlService>().Register();
+            _client.Ready += () =>
+            {
+                Console.WriteLine("Bot is connected!");
+                if (app.Environment.IsDevelopment()) app.RunAsync();
+                else app.RunAsync("http://localhost:5104/");
+                return Task.CompletedTask;
+            };
             await Task.Delay(Timeout.Infinite);
         }
 
@@ -39,6 +43,7 @@ namespace MarkenJaden_Website.Integrations.Discord
             return new ServiceCollection()
                 .AddSingleton<DiscordSocketClient>()
                 .AddSingleton<CommandService>()
+                .AddSingleton<ControlService>()
                 .AddSingleton<HttpClient>()
                 .BuildServiceProvider();
         }
