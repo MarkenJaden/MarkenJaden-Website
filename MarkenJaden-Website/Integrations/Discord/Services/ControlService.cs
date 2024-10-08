@@ -16,7 +16,7 @@ namespace MarkenJaden_Website.Integrations.Discord.Services
 
         public static string GetProfilePicture()
         {
-            return _discord.GetGuild(961373284555956254).SearchUsersAsync("MarkenJaden", 1).Result.First().GetDisplayAvatarUrl();
+            return _discord.GetGuild(961373284555956254).SearchUsersAsync("MarkenJaden", 1).Result.First().GetDisplayAvatarUrl(size:1024);
         }
     }
 }
